@@ -25,10 +25,11 @@ public class MicroServiceApplication {
                         .id(UUID.randomUUID().toString())
                         .type(Math.random() > 0.5 ? AccountType.CURRENT_ACCOUNT : AccountType.SAVING_ACCOUNT)
                         .balance(10000 + Math.random() * 90000)
-                        .createdAT(new Date())
+                          .createdAT(new Date())
                         .currency("MAD")
                         .build();
                 bankAccountRepository.save(bankAccount);
+
             }
         };
     }
